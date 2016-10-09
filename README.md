@@ -1,6 +1,6 @@
 ####GitDeploy  
 1. SSH into your servers DocumentRoot  
-2.   
+2.  Do:
     git clone https://github.com/gregor160300/GitDeploy.git deploy
     mv deploy/*.php ..
     rm -R deploy  
