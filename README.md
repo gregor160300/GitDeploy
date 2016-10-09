@@ -5,6 +5,7 @@ cd deploy
 mv *.php ..
 cd ..
 rm -R -f deploy  
+chmod 0644 config.php deploy.php  
 ```  
 1. SSH into your servers DocumentRoot & run commands above 
 2. Add http(s)://yourdomain.tld/deploy.php to your GitHub webhooks  
