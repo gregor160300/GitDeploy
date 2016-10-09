@@ -13,6 +13,8 @@ if (empty($payload)) {
             $cdcommand = 'cd '.$repo['path'].' && ';
         }
     }
+    
+    $pwd = shell_exec('pwd');
 
     $commands = array(
         $cdcommand.'pwd',
@@ -22,8 +24,8 @@ if (empty($payload)) {
         $cdcommand.GITPATH.' submodule sync 2>&1',
         $cdcommand.GITPATH.' submodule update 2>&1',
         $cdcommand.GITPATH.' submodule status 2>&1',
-        'find pwd -type d -exec chmod 755 {} \;',
-        'find pwd -type f -exec chmod 644 {} \;',
+        'find '.$pwd.' -type d -exec chmod 755 {} \;',
+        'find '.$pwd.' -type f -exec chmod 644 {} \;',
     );
 
     foreach ($commands as $command) {
