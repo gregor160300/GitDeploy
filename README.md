@@ -1,7 +1,11 @@
 ####GitDeploy  
-1. These php scripts should be put into your servers DocumentRoot  
-2. Add http(s)://yourdomain.tld/deploy.php to your GitHub webhooks  
-3. Define your settings in config.php  
+1. SSH into your servers DocumentRoot  
+2.   
+    git clone https://github.com/gregor160300/GitDeploy.git deploy
+    mv deploy/*.php ..
+    rm -R deploy  
+3. Add http(s)://yourdomain.tld/deploy.php to your GitHub webhooks  
+4. Define your settings in config.php  
   
 #####What this does    
 - Auto pull your repo on a new git commit 

@@ -16,6 +16,7 @@ if (empty($payload)) {
 
     $commands = array(
         $cdcommand.'pwd',
+        $cdcommand.GITPATH.' reset --hard HEAD 2>&1',
         $cdcommand.GITPATH.' pull 2>&1',
         $cdcommand.GITPATH.' status 2>&1',
         $cdcommand.GITPATH.' submodule sync 2>&1',
