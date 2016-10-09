@@ -1,8 +1,10 @@
 ####GitDeploy  
 ```
 git clone https://github.com/gregor160300/GitDeploy.git deploy
-mv deploy/*.php ..
-rm -R deploy  
+cd deploy
+mv *.php ..
+cd ..
+rm -R -f deploy  
 ```  
 1. SSH into your servers DocumentRoot & run commands above 
 2. Add http(s)://yourdomain.tld/deploy.php to your GitHub webhooks  
